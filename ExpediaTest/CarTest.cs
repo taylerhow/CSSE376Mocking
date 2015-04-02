@@ -64,10 +64,10 @@ namespace ExpediaTest
             {
                 Expect.Call(mockDB.getCarLocation(342)).Return(firstLocation);
                 Expect.Call(mockDB.getCarLocation(873)).Return(secondLocation);
-                Expect.Call(mockDB.getCarLocation(0)).Return(noSuchCarID);
+                //Expect.Call(mockDB.getCarLocation(0)).Return(noSuchCarID);
             }
 
-            mockDB.Stub(x => x.getRoomOccupant(Arg<int>.Is.Anything)).Return(noSuchCarID);
+            mockDB.Stub(x => x.getCarLocation(Arg<int>.Is.Anything)).Return(noSuchCarID);
 
             mocks.ReplayAll();
 

@@ -73,7 +73,7 @@ namespace ExpediaTest
             {
                 Expect.Call(mockDB.getRoomOccupant(24)).Return(roomOccupant);
                 Expect.Call(mockDB.getRoomOccupant(1025)).Return(anotherRoomOccupant);
-                Expect.Call(mockDB.getRoomOccupant(25)).Return(empty);
+                //Expect.Call(mockDB.getRoomOccupant(25)).Return(empty);
             }
 
             mockDB.Stub(x => x.getRoomOccupant(Arg<int>.Is.Anything)).Return(empty);
